@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language: Xen
-" Maintainer: Your Name
-" Latest Revision: 2026-01-02
+" Maintainer: Jake Rieger <contact.jakerieger@gmail.com>
+" Latest Revision: 2026-01-09
 
 if exists("b:current_syntax")
   finish
