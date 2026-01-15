@@ -16,9 +16,9 @@ if [ ! -d "$NVIM_ROOT/syntax" ]; then
 fi
 
 # Create symlinks to config directories
-ln -s ftdetect/xen.vim "$NVIM_ROOT/ftdetect/xen.vim"
-ln -s indent/xen.vim "$NVIM_ROOT/indent/xen.vim"
-ln -s syntax/xen.vim "$NVIM_ROOT/syntax/xen.vim"
+ln -s $(realpath ftdetect/xen.vim) "$NVIM_ROOT/ftdetect/xen.vim"
+ln -s $(realpath indent/xen.vim) "$NVIM_ROOT/indent/xen.vim"
+ln -s $(realpath syntax/xen.vim) "$NVIM_ROOT/syntax/xen.vim"
 
 # Generate uninstall script
 cat >uninstall.sh <<'EOF'
@@ -35,3 +35,4 @@ chmod +x uninstall.sh
 
 echo "Done. Restart Neovim to see the changes take effect."
 echo "You can run ./uninstall.sh to uninstall the extension."
+
